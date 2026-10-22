@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "My Nota — Post-it Notes",
+  "short_name": "My Nota",
+  "version": "1.0.0",
+  "description": "จดโน้ตสไตล์ Notion บนกระดาษ Post-it รองรับทุกภาษา บันทึกโค้ดพร้อมไฮไลต์ และซิงก์ทุกเครื่องผ่าน Chrome Sync",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomBM8vbpj6mGBOkNqbVAqI1z3B929nuZkCV36J/cGWaV9a51nLonGIjQ8WGw0v9y/b4/zqY0ibIjN/vACWk2D/el3cz6T5PAxM+CAAlP2K3uiie6D/EvR34/Refgkun5N5NZMMdcdmmmznhJn8F14/9vSJIeYoS+9p1VWHxtGWMnlCWbk6yvvHQQxhBSaBhJC8MPDA56S1qyYALxMuBRRo7mLZ42qZZHh/OgoMcTw2qpZQVSuetbli5bQj+r2bhvU4OH9rl51GrpcxjAxS9YnWMEdDET+R7XM7ARGHkKv4pdnOdLyeAlNS5dxokvgNKfOIsa2Cy8dz/3ERxdGdZybQIDAQAB",
+  "permissions": ["storage", "unlimitedStorage", "sidePanel"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "My Nota",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "popup.html?mode=panel"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+N" },
+      "description": "เปิด My Nota"
+    }
+  }
+}
