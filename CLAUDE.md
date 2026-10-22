@@ -25,7 +25,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Sync quota:** `chrome.storage.sync` allows 100 KB in total and 8 KB per item, plus write-rate limits. Keep note data compact:
   - Drawings are stored as simplified vector strokes, never as images.
   - Rich text is stored as `html` only when formatting actually exists.
-- **Uninstall wipes data:** uninstalling the extension wipes its `storage.sync` data. A durable backup (Supabase, Google Drive, or auto file backup) was discussed but deferred by the user. The only backup today is manual export/import as `.json`.
+- **Uninstall wipes data on every device:** uninstalling the extension wipes its `storage.sync` data. The user tested this on 2026-10-22: removing the extension on one synced machine also erased the notes on the other machine, because the deletion syncs through the Google account. A durable backup outside the extension (Supabase, Google Drive, or auto file backup) was discussed but deferred by the user. The only backup today is manual export/import as `.json`.
 
 ## Architecture
 
